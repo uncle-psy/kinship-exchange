@@ -18,7 +18,7 @@ export function MembershipChart() {
         <div>
           <div className="label-caps">Membership Goals</div>
           <div className="font-display text-xl text-white">
-            Progress across communities
+            Progress across movements
           </div>
         </div>
         <div className="text-xs text-[color:var(--muted-soft)]">

@@ -25,7 +25,7 @@ const goudy = localFont({
 export const metadata: Metadata = {
   title: "Kinship Exchange",
   description:
-    "A community funding exchange. Join and fund the communities you want to belong to.",
+    "A movement funding exchange. Join and fund the movements you want to belong to.",
 };
 
 export default function RootLayout({

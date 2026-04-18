@@ -23,7 +23,7 @@ export default function Home() {
               <div>
                 <div className="font-display text-xl text-white">Launch</div>
                 <p className="text-sm text-[color:var(--muted)]">
-                  Start a community that others want to fund from day one.
+                  Start a movement that others want to fund from day one.
                 </p>
               </div>
             </div>
@@ -50,11 +50,11 @@ export default function Home() {
           <div className="mb-6 flex items-end justify-between">
             <div>
               <h2 className="font-display text-3xl text-white">
-                Community ownership{" "}
+                Movement ownership{" "}
                 <em className="text-emph font-display">matters</em>
               </h2>
               <p className="mt-2 max-w-2xl text-sm text-[color:var(--muted)]">
-                Communities compound when the people inside them have a real
+                Movements compound when the people inside them have a real
                 stake. Membership goals keep founders honest and give members
                 something to build toward together.
               </p>
@@ -63,10 +63,10 @@ export default function Home() {
           <MembershipChart />
         </section>
 
-        <section id="communities" className="mx-auto max-w-6xl px-6 pt-16">
+        <section id="movements" className="mx-auto max-w-6xl px-6 pt-16">
           <div className="mb-6 flex items-baseline justify-between">
             <h2 className="font-display text-3xl text-white">
-              Join a community
+              Join a movement
             </h2>
             <span className="label-caps">{communities.length} live</span>
           </div>
@@ -81,7 +81,7 @@ export default function Home() {
 
         <section className="mx-auto max-w-6xl px-6 pt-20">
           <h2 className="font-display text-4xl text-white md:text-5xl">
-            Launch a community{" "}
+            Launch a movement{" "}
             <em className="text-emph font-display">the right way</em>
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-[color:var(--muted)]">
@@ -99,12 +99,12 @@ export default function Home() {
               {
                 title: "Transparent",
                 body:
-                  "Membership funds flow to a community treasury with public ledgers.",
+                  "Membership funds flow to a movement treasury with public ledgers.",
               },
               {
                 title: "Raise more",
                 body:
-                  "Members bring members. Communities that deliver raise the ceiling.",
+                  "Members bring members. Movements that deliver raise the ceiling.",
               },
               {
                 title: "Real alignment",
@@ -138,8 +138,8 @@ export default function Home() {
               <ol className="mt-6 space-y-5">
                 {[
                   {
-                    t: "Browse communities",
-                    b: "Explore the live exchange. Each community lists its goal, price, and the people behind it.",
+                    t: "Browse movements",
+                    b: "Explore the live exchange. Each movement lists its goal, price, and the people behind it.",
                   },
                   {
                     t: "Commit a seat",
@@ -147,11 +147,11 @@ export default function Home() {
                   },
                   {
                     t: "Raise or refund",
-                    b: "If a community hits its goal, you're in. If it falls short by the deadline, your commitment is returned.",
+                    b: "If a movement hits its goal, you're in. If it falls short by the deadline, your commitment is returned.",
                   },
                   {
                     t: "Show up",
-                    b: "Communities are evaluated on participation, not just funding. Members who contribute get credit that compounds.",
+                    b: "Movements are evaluated on participation, not just funding. Members who contribute get credit that compounds.",
                   },
                   {
                     t: "Governance that works",
@@ -174,17 +174,17 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-display text-2xl text-white">
-                For Community Founders
+                For Movement Founders
               </h3>
               <ol className="mt-6 space-y-5">
                 {[
                   {
-                    t: "Submit your community",
+                    t: "Submit your movement",
                     b: "Tell us who it's for, what the first year looks like, and what membership unlocks.",
                   },
                   {
                     t: "Set the goal",
-                    b: "Choose the membership target that makes your community viable. Seats price accordingly.",
+                    b: "Choose the membership target that makes your movement viable. Seats price accordingly.",
                   },
                   {
                     t: "Raise with members",
@@ -229,8 +229,8 @@ export default function Home() {
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-5 text-sm text-[color:var(--muted)]">
-            <a href="#communities" className="hover:text-white">
-              Communities
+            <a href="#movements" className="hover:text-white">
+              Movements
             </a>
             <a href="#how-it-works" className="hover:text-white">
               How it works

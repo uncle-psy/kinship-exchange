@@ -14,8 +14,8 @@ export function TopBar() {
           </span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-[color:var(--muted)] md:flex">
-          <a href="#communities" className="hover:text-white">
-            Communities
+          <a href="#movements" className="hover:text-white">
+            Movements
           </a>
           <a href="#how-it-works" className="hover:text-white">
             How it works
@@ -25,8 +25,8 @@ export function TopBar() {
           </a>
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="#communities" className="btn-ghost hidden px-4 py-2 text-sm md:inline-flex">
-            All Communities
+          <Link href="#movements" className="btn-ghost hidden px-4 py-2 text-sm md:inline-flex">
+            All Movements
           </Link>
           <button type="button" className="btn-primary px-4 py-2 text-sm">
             Sign in

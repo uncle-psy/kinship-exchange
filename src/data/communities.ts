@@ -20,9 +20,9 @@ export const communities: Community[] = [
   {
     slug: "big-kaduna",
     name: "The Big KADUNA",
-    tagline: "Living, evolving communities at scale",
+    tagline: "Living, evolving movements at scale",
     description:
-      "A federation of communities that compound over time. KADUNA is the largest Kinship space, hosting member-run guilds, ongoing councils, and cross-community expeditions.",
+      "A federation of movements that compound over time. KADUNA is the largest Kinship space, hosting member-run guilds, ongoing councils, and cross-movement expeditions.",
     symbol: "KDNA",
     glyph: "K",
     accent: "#F2705E",
@@ -53,7 +53,7 @@ export const communities: Community[] = [
     name: "Inner Clinic",
     tagline: "Patient-powered health and wellbeing",
     description:
-      "A community owned by the people it serves. Protocols, peer support, and pooled research funded by members who share outcomes.",
+      "A movement owned by the people it serves. Protocols, peer support, and pooled research funded by members who share outcomes.",
     symbol: "CLIN",
     glyph: "I",
     accent: "#C86A6A",
@@ -98,7 +98,7 @@ export const communities: Community[] = [
     name: "Service Alliance",
     tagline: "Serving those who serve",
     description:
-      "A community for veterans, first responders, teachers, and caregivers. Member-governed benefits, peer advocacy, and shared resources.",
+      "A movement for veterans, first responders, teachers, and caregivers. Member-governed benefits, peer advocacy, and shared resources.",
     symbol: "SERV",
     glyph: "S",
     accent: "#7C8A6A",
@@ -113,7 +113,7 @@ export const communities: Community[] = [
     name: "Crypto Launch Codes",
     tagline: "Where decentralized organizations gain legal personhood",
     description:
-      "Tooling and templates for turning a token community into a recognized legal entity. Shared counsel, shared filings, shared playbooks.",
+      "Tooling and templates for turning a token movement into a recognized legal entity. Shared counsel, shared filings, shared playbooks.",
     symbol: "CLC",
     glyph: "C",
     accent: "#5E8BB8",
@@ -128,7 +128,7 @@ export const communities: Community[] = [
     name: "The Feathered Nest",
     tagline: "Where families gather, grow, and thrive together",
     description:
-      "A community for parents, caregivers, and chosen family. Pooled childcare, shared retreats, intergenerational programming.",
+      "A movement for parents, caregivers, and chosen family. Pooled childcare, shared retreats, intergenerational programming.",
     symbol: "NEST",
     glyph: "N",
     accent: "#C98AA0",

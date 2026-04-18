@@ -20,7 +20,7 @@ export function FeaturedCommunity({
       <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-[1.3fr_1fr]">
         <div className="surface-card rounded-xl p-6">
           <div className="mb-4 flex items-center justify-between">
-            <span className="label-caps">Featured Community</span>
+            <span className="label-caps">Featured Movement</span>
             <span className="text-xs text-[color:var(--muted-soft)]">
               Apply to be featured →
             </span>
@@ -64,7 +64,7 @@ export function FeaturedCommunity({
                 </div>
               </div>
               <div className="text-right">
-                <div className="label-caps">Communities</div>
+                <div className="label-caps">Movements</div>
                 <div className="font-display text-xl text-white">
                   {communities.length}
                 </div>
