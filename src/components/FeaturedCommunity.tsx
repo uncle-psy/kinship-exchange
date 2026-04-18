@@ -25,13 +25,21 @@ export function FeaturedCommunity({
               Apply to be featured →
             </span>
           </div>
-          <div className="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-xl bg-black p-6 text-white">
+          <div className="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-xl p-6 text-white">
             <div
               aria-hidden
-              className="absolute inset-0 opacity-30"
+              className="absolute inset-0"
               style={{
-                backgroundImage:
-                  "radial-gradient(circle at 20% 20%, rgba(242,112,94,0.55), transparent 40%), radial-gradient(circle at 80% 60%, rgba(94,139,184,0.4), transparent 45%), radial-gradient(circle at 50% 90%, rgba(142,110,184,0.4), transparent 45%)",
+                background:
+                  "radial-gradient(circle at 18% 18%, rgba(255,0,174,0.55), transparent 45%), radial-gradient(circle at 82% 65%, rgba(0,97,255,0.5), transparent 48%), radial-gradient(circle at 50% 95%, rgba(123,85,159,0.5), transparent 55%), #0b0733",
+              }}
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(3,0,7,0.3) 0%, rgba(21,0,59,0.04) 50%, rgba(39,0,109,0) 100%)",
               }}
             />
             <div className="relative">
@@ -42,14 +50,14 @@ export function FeaturedCommunity({
                 >
                   {featured.glyph}
                 </div>
-                <div className="label-caps text-white/70">Founded by {featured.foundedBy}</div>
+                <div className="label-caps text-white/80">Founded by {featured.foundedBy}</div>
               </div>
             </div>
             <div className="relative">
               <h2 className="font-display text-4xl md:text-5xl">
                 {featured.name}
               </h2>
-              <p className="mt-2 max-w-md text-sm text-white/80">
+              <p className="mt-2 max-w-md text-sm text-white/85">
                 {featured.tagline}
               </p>
             </div>
@@ -59,19 +67,19 @@ export function FeaturedCommunity({
         <div className="flex flex-col gap-4">
           <div className="surface-card rounded-2xl p-6">
             <div className="label-caps">Cumulative Members</div>
-            <div className="mt-2 font-display text-5xl text-black">
+            <div className="mt-2 font-display text-5xl text-white">
               {cumulativeMembers.toLocaleString()}
             </div>
             <div className="mt-4 flex items-baseline justify-between">
               <div>
                 <div className="label-caps">Committed</div>
-                <div className="font-display text-xl text-black">
+                <div className="font-display text-xl text-white">
                   {formatLarge(cumulativeFunding)}
                 </div>
               </div>
               <div className="text-right">
                 <div className="label-caps">Communities</div>
-                <div className="font-display text-xl text-black">
+                <div className="font-display text-xl text-white">
                   {communities.length}
                 </div>
               </div>
@@ -85,15 +93,12 @@ export function FeaturedCommunity({
             </p>
             <div className="mt-1 flex items-center justify-between">
               <div>
-                <div className="font-display text-lg text-black">
+                <div className="font-display text-lg text-white">
                   ${featured.pricePerSeat}
                 </div>
                 <div className="label-caps">per seat</div>
               </div>
-              <button
-                type="button"
-                className="rounded-full bg-[color:var(--accent)] px-5 py-2 text-sm font-medium text-white hover:bg-[color:var(--accent-hover)]"
-              >
+              <button type="button" className="btn-accent rounded-full px-5 py-2 text-sm font-medium">
                 Join {featured.symbol}
               </button>
             </div>

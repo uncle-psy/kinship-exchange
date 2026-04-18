@@ -17,7 +17,7 @@ export function MembershipChart() {
       <div className="mb-4 flex items-baseline justify-between">
         <div>
           <div className="label-caps">Membership Goals</div>
-          <div className="font-display text-xl text-black">
+          <div className="font-display text-xl text-white">
             Progress across communities
           </div>
         </div>
@@ -32,6 +32,12 @@ export function MembershipChart() {
         role="img"
         aria-label="Membership goals chart"
       >
+        <defs>
+          <linearGradient id="memGradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#0061ff" />
+            <stop offset="100%" stopColor="#ff00ae" />
+          </linearGradient>
+        </defs>
         {Array.from({ length: yTicks + 1 }).map((_, i) => {
           const y = pad.top + (chartH / yTicks) * i;
           const value = tickStep * (yTicks - i);
@@ -42,7 +48,7 @@ export function MembershipChart() {
                 x2={width - pad.right}
                 y1={y}
                 y2={y}
-                stroke="#e4dfd3"
+                stroke="rgba(255,255,255,0.08)"
                 strokeDasharray="2 4"
               />
               <text
@@ -50,7 +56,7 @@ export function MembershipChart() {
                 y={y + 3}
                 textAnchor="end"
                 fontSize="10"
-                fill="#6b6760"
+                fill="#8a8db0"
               >
                 {value >= 1000 ? `${value / 1000}K` : value}
               </text>
@@ -71,7 +77,8 @@ export function MembershipChart() {
                 y={goalY}
                 width={barW}
                 height={goalH}
-                fill="#e4dfd3"
+                fill="rgba(255,255,255,0.1)"
+                stroke="rgba(255,255,255,0.18)"
                 rx="2"
               />
               <rect
@@ -79,7 +86,7 @@ export function MembershipChart() {
                 y={memY}
                 width={barW}
                 height={memH}
-                fill={c.accent}
+                fill="url(#memGradient)"
                 rx="2"
               />
               <text
@@ -87,7 +94,7 @@ export function MembershipChart() {
                 y={height - pad.bottom + 14}
                 textAnchor="middle"
                 fontSize="9"
-                fill="#6b6760"
+                fill="#8a8db0"
               >
                 {c.symbol}
               </text>
@@ -96,8 +103,8 @@ export function MembershipChart() {
                 y={height - pad.bottom + 26}
                 textAnchor="middle"
                 fontSize="9"
-                fill="#111"
-                fontWeight="500"
+                fill="#ffffff"
+                fontWeight="600"
               >
                 {Math.round((c.members / c.goal) * 100)}%
               </text>
@@ -111,14 +118,14 @@ export function MembershipChart() {
           <span
             aria-hidden
             className="inline-block h-3 w-3 rounded-sm"
-            style={{ background: "var(--accent)" }}
+            style={{ background: "var(--gradient-accent)" }}
           />
           Current members
         </span>
         <span className="flex items-center gap-2">
           <span
             aria-hidden
-            className="inline-block h-3 w-3 rounded-sm bg-[#e4dfd3]"
+            className="inline-block h-3 w-3 rounded-sm border border-white/25 bg-white/10"
           />
           Goal
         </span>

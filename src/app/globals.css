@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f2ec;
-  --surface: #fbf9f4;
-  --foreground: #111111;
-  --muted: #6b6760;
-  --border: #d9d4ca;
-  --accent: #f2705e;
-  --accent-hover: #ea5a46;
-  --accent-soft: #fde7e2;
+  --background: #050824;
+  --background-deep: #030520;
+  --surface: rgba(16, 14, 82, 0.28);
+  --surface-strong: rgba(27, 0, 76, 0.55);
+  --foreground: #ffffff;
+  --muted: #b6b8d4;
+  --muted-soft: #8a8db0;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --accent: #ff00ae;
+  --accent-blue: #0061ff;
+  --accent-soft: rgba(255, 0, 174, 0.16);
+  --accent-hover: #ff29c3;
+  --gradient-accent: linear-gradient(90.66deg, #0061ff 10%, #ff00ae 92.51%);
+  --gradient-accent-soft: linear-gradient(
+    90.66deg,
+    rgba(0, 97, 255, 0.18) 10%,
+    rgba(255, 0, 174, 0.18) 92.51%
+  );
+  --gradient-deep: linear-gradient(135.98deg, #1a006d 0%, #7b559f 100%);
 }
 
 @theme inline {
@@ -18,10 +30,12 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-accent-blue: var(--accent-blue);
   --color-accent-hover: var(--accent-hover);
   --color-accent-soft: var(--accent-soft);
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-goudy), "Goudy Old Style", Georgia, serif;
+  --font-sans: var(--font-avenir), "Avenir Next", "Avenir", ui-sans-serif,
+    system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
@@ -33,21 +47,50 @@ body {
 
 body {
   font-family: var(--font-sans);
-  font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(255, 0, 174, 0.14),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 82% 28%,
+      rgba(0, 97, 255, 0.18),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(123, 85, 159, 0.18),
+      transparent 55%
+    ),
+    var(--background);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  color: var(--foreground);
+  letter-spacing: 0;
 }
 
 .font-display {
-  font-family: var(--font-serif);
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .label-caps {
   font-size: 10px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 500;
+  color: var(--muted-soft);
+  font-weight: 600;
 }
 
 .hatch-left,
@@ -58,7 +101,7 @@ body {
   width: 14px;
   background-image: repeating-linear-gradient(
     135deg,
-    var(--border) 0 1px,
+    rgba(255, 255, 255, 0.08) 0 1px,
     transparent 1px 7px
   );
   pointer-events: none;
@@ -75,4 +118,62 @@ body {
 .surface-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.surface-card-strong {
+  background: var(--surface-strong);
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--gradient-accent);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gradient-text {
+  background: var(--gradient-accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-accent {
+  background: var(--gradient-accent);
+  color: #ffffff;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.btn-accent:hover {
+  filter: brightness(1.1);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-strong);
+  color: var(--foreground);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
 }

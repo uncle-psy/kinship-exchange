@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const avenir = localFont({
+  variable: "--font-avenir",
   display: "swap",
+  src: [
+    { path: "../assets/fonts/avenir/avenir-light.ttf", weight: "300", style: "normal" },
+    { path: "../assets/fonts/avenir/avenir-book.ttf", weight: "400", style: "normal" },
+    { path: "../assets/fonts/avenir/avenir-regular.ttf", weight: "500", style: "normal" },
+    { path: "../assets/fonts/avenir/avenir-heavy.ttf", weight: "700", style: "normal" },
+    { path: "../assets/fonts/avenir/avenir-black.ttf", weight: "900", style: "normal" },
+  ],
+});
+
+const goudy = localFont({
+  variable: "--font-goudy",
+  display: "swap",
+  src: [
+    { path: "../assets/fonts/goudy/goudy_heavyface_bt.ttf", weight: "400", style: "normal" },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -18,7 +32,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${avenir.variable} ${goudy.variable} h-full antialiased`}>
       <body className="min-h-full">{children}</body>
     </html>
   );
