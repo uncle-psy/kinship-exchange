@@ -8,16 +8,16 @@ function formatMembers(n: number) {
 export function CommunityCard({ c }: { c: Community }) {
   const pct = Math.min(100, Math.round((c.members / c.goal) * 100));
   return (
-    <div className="surface-card flex h-full flex-col gap-5 p-6">
+    <div className="surface-card flex h-full flex-col gap-5 rounded-xl p-6">
       <div className="flex items-start justify-between">
         <div
-          className="flex h-12 w-12 items-center justify-center rounded-xl font-display text-xl text-white shadow-[0_0_20px_rgba(0,0,0,0.3)]"
+          className="flex h-12 w-12 items-center justify-center rounded-lg font-display text-xl text-white"
           style={{ background: c.accent }}
           aria-hidden
         >
           {c.glyph}
         </div>
-        <span className="label-caps rounded-full border border-[color:var(--border)] bg-white/5 px-2.5 py-1">
+        <span className="label-caps rounded-full border border-[color:var(--border)] px-2.5 py-1">
           {c.status === "forming" ? "Forming" : "Open"}
         </span>
       </div>
@@ -49,17 +49,17 @@ export function CommunityCard({ c }: { c: Community }) {
         aria-label={`${pct}% toward goal`}
       >
         <div
-          className="h-full rounded-full"
-          style={{ width: `${pct}%`, background: "var(--gradient-accent)" }}
+          className="h-full rounded-full bg-[color:var(--accent)]"
+          style={{ width: `${pct}%` }}
         />
       </div>
 
-      <div className="rounded-xl border border-[color:var(--border)] bg-black/25 p-3">
+      <div className="rounded-lg border border-[color:var(--border)] bg-black/30 p-3">
         <div className="flex items-center justify-between text-sm">
           <span className="text-[color:var(--muted)]">Seat</span>
           <span className="text-white">${c.pricePerSeat}</span>
         </div>
-        <button type="button" className="btn-accent mt-2 w-full rounded-lg py-2 text-sm font-medium">
+        <button type="button" className="btn-primary mt-2 w-full py-2 text-sm">
           Join {c.symbol}
         </button>
       </div>
